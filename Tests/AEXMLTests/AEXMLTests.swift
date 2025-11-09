@@ -267,7 +267,7 @@ class AEXMLTests {
     @Test
     func testNotExistingElement() {
         // non-optional
-        #expect(throws: AEXMLError.elementNotFound) {
+        #expect(throws: AEXMLError.elementNotFound("ducks")) {
             try exampleDocument.root["ducks"]["duck"]
         }
 

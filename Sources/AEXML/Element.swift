@@ -82,7 +82,7 @@ open class AEXMLElement {
             guard let
                     first = children.first(where: { $0.name == key })
             else {
-                throw AEXMLError.elementNotFound
+                throw AEXMLError.elementNotFound(key)
             }
             return first
         }
